@@ -1,0 +1,43 @@
+# Contexto mínimo para docker build: solo go.mod, src/ y web/ (sin artefactos).
+
+# Control de versiones y sistema operativo
+.git
+.gitignore
+.DS_Store
+**/.DS_Store
+
+# Dependencias y builds locales (se regeneran dentro de la imagen)
+**/node_modules
+web/dist
+**/*.tsbuildinfo
+web/.vite
+coverage
+**/coverage
+*.test
+*.out
+/api
+*.exe
+
+# Harness y configuración de agentes (solo uso local)
+.harness
+.claude
+.agents
+CLAUDE.md
+skills-lock.json
+init.sh
+
+# Secretos: nunca entran al contexto
+.env
+.env.*
+**/.env
+**/.env.*
+*.key
+**/*.key
+*secret*
+**/*secret*
+
+# No se usan para construir la imagen
+Dockerfile
+.dockerignore
+render.yaml
+README.md

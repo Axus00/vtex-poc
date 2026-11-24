@@ -1,0 +1,11 @@
+# Blueprint de Render: un solo servicio web construido con el Dockerfile de la raíz.
+# Render define PORT y la API lo respeta; no hace falta configurar variables ni secretos.
+services:
+  - type: web
+    name: vtex-poc
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    autoDeploy: true

@@ -1,0 +1,34 @@
+# --- Custom Harness: skill y artefactos instalados (solo uso local) ---
+# Skill fuente (instalada vía skills-lock)
+.claude/skills/custom-harness/
+.agents/skills/custom-harness/
+skills-lock.json
+
+# Contrato, estado del workflow y checkpoints
+.harness/
+
+# Dispatcher y agentes del harness
+CLAUDE.md
+.claude/agents/leader.md
+.claude/agents/implementer.md
+.claude/agents/reviewer.md
+
+# --- Claude Code: configuración local ---
+.claude/settings.local.json
+
+# --- Go ---
+/api
+*.exe
+*.test
+*.out
+coverage.*
+
+# --- Front (web/ tiene además su propio .gitignore) ---
+web/node_modules/
+web/dist/
+
+# --- Entorno y sistema operativo ---
+.env
+.env.*
+!.env.example
+.DS_Store
